@@ -1,17 +1,39 @@
 {
-  "name": "aaa",
+  "name": "vite-plugin-cpacker",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": "kuyoru",
   "type": "module",
+  "license": "MIT",
+  "files": [
+    "dist/",
+    "README.md"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuyoru-kamikisho/vite-plugin-cpacker.git",
+    "directory": "plugin"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
+    "build-lib": "vite --config vite.lib.ts build",
     "preview": "vite preview"
   },
   "dependencies": {
     "vue": "^3.4.21"
   },
   "devDependencies": {
+    "@types/node": "^20.12.7",
     "@vitejs/plugin-vue": "^5.0.4",
     "less": "^4.2.0",
     "sass": "^1.75.0",
