@@ -1,8 +1,9 @@
 ```txt
-  •       ┓    •          ┓     
-┓┏┓╋┏┓━━┏┓┃┓┏┏┓┓┏┓━━┏┏┓┏┓┏┃┏┏┓┏┓
-┗┛┗┗┗   ┣┛┗┗┻┗┫┗┛┗  ┗┣┛┗┻┗┛┗┗ ┛ 
-        ┛     ┛      ┛          
+       _ __        _             __          _                            __          
+ _  __(_) /____   (_)_________  / /_ _____ _(_)__  ___________  ___ _____/ /_____ ____
+| |/ / / __/ -_) / (_-<___/ _ \/ / // / _ `/ / _ \/___/ __/ _ \/ _ `/ __/  '_/ -_) __/
+|___/_/\__/\__/_/ /___/  / .__/_/\_,_/\_, /_/_//_/    \__/ .__/\_,_/\__/_/\_\\__/_/   
+             |___/      /_/          /___/              /_/                           
 ```
 
 ### 介绍
@@ -34,7 +35,7 @@
 #### 2. 安装本插件并导入
 
 ```shell
-yarn add vite-plugin-cpacker -D
+yarn add vitejs-plugin-cpacker -D
 ```
 
 ```typescript
@@ -44,7 +45,7 @@ import sass from 'sass'
 import less from 'less'
 import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
-import cpacker from './plugin'
+import cpacker from 'vitejs-plugin-cpacker'
 
 export default defineConfig({
     plugins: [

@@ -1,6 +1,6 @@
 {
-  "name": "vite-plugin-cpacker",
-  "private": true,
+  "name": "vitejs-plugin-cpacker",
+  "private": false,
   "version": "1.0.0",
   "author": "kuyoru",
   "type": "module",
