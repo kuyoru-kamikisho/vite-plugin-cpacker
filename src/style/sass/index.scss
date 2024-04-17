@@ -1,0 +1,30 @@
+@import "font.sass";
+
+div{
+  color: black;
+  cursor: default;
+}
+
+:root {
+  --normal-icon-size: 16;
+  --active-font-size: 18;
+}
+
+:scope {
+  --piece-icon-size: 16;
+  --header-font-size: 18;
+}
+
+input {
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
+
+@for $i from 1 through 12 {
+  .pa-#{$i} {
+    padding: $i * 4px;
+  }
+}
