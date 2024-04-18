@@ -3,4 +3,5 @@ export type CPackerConfig = {
     scopeName?: string
     sass?: any
     less?: any
+    exclude?: RegExp | string
 }

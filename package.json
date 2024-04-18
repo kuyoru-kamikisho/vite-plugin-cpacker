@@ -1,7 +1,7 @@
 {
   "name": "vitejs-plugin-cpacker",
   "private": false,
-  "version": "1.0.11",
+  "version": "1.0.2",
   "author": "kuyoru",
   "type": "module",
   "license": "MIT",

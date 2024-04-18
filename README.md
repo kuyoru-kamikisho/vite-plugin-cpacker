@@ -120,18 +120,19 @@ body {
 }
 ```
 
-❤ 在插件中，为了让您的一些全局样式生效，任何以 `[testname]`
-开头的样式表都会被跳过转换原封不动的输出到您的最终文件中，
-但是要注意不要对 :root or :scope 使用这种写法。
+❤ 在插件中，为了让您的一些全局样式生效，配置项的 `exclude`
+属性可以用来排除一些您不想被转换的样式表。它是基于[正则表达式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)的，
+您应当注意这不是万能的，您的正则很难保证在使用了UI库的情况下也能被正常解析，因此您应该慎用此选项。
 
 ### 配置选项
 
 ```typescript
 export type CPackerConfig = {
     enable      ?: boolean      // 是否启用插件
-    scopeName   ?: string       // 限定名称，会被用做属性选择器
+    scopeName   ?: string       // 限定名称，会被用做属性选择器，默认值：“k-2024”
     sass        ?: any          // css预处理器，至少要传递一个css处理器，即使您的项目中只用了css
     less        ?: any          // css预处理器，至少要传递一个css处理器，即使您的项目中只用了css
+    exclude     ?: RegExp       // 正则表达式，被匹配到的样式表内容将会被跳过，默认值：`(?:\\[${scopeName}\\])\\s*{[^{}]*}`
 }
 ```
 
