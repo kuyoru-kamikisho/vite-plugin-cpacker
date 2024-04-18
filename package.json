@@ -13,7 +13,8 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "build-lib": "vite --config vite.lib.ts build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "gent": "tsc plugin/index.ts --declaration --allowJs --emitDeclarationOnly --outDir dtsdir"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
