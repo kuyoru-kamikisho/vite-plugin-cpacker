@@ -41,7 +41,7 @@ yarn add vitejs-plugin-cpacker -D
 ```typescript
 // vite.config.ts
 
-import sass from 'sass'
+import * as sass from 'sass'
 import less from 'less'
 import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
